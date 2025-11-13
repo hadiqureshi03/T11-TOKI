@@ -63,9 +63,9 @@ import heroImage from '../assets/heroimg.jpg';
 
   .hero-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 70px;
+    font-size: 5vw;
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 0.3vw;
     line-height: 1.1;
     margin-bottom: 1.5rem;
     color: #DDBA4E;
@@ -78,7 +78,7 @@ import heroImage from '../assets/heroimg.jpg';
 
   .hero-subtitle {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 2vw, 1rem);
     font-weight: 600;
     line-height: 1.6;
     color: white;
@@ -91,8 +91,8 @@ import heroImage from '../assets/heroimg.jpg';
     color: white;
     border: 2px solid #000;
     border-radius: 10px;
-    padding: 0.8rem 2.5rem;
-    font-size: 0.9rem;
+    padding: clamp(0.6rem, 1.5vw, 0.8rem) clamp(1.5rem, 3vw, 2.5rem);
+    font-size: clamp(0.75rem, 1.8vw, 0.9rem);
     font-weight: 600;
     letter-spacing: 1px;
     cursor: pointer;
@@ -101,5 +101,32 @@ import heroImage from '../assets/heroimg.jpg';
 
   .hero-button:hover {
     opacity: 0.8;
+  }
+
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 4rem 1.5rem;
+      min-height: 500px;
+    }
+
+    .hero-text {
+      max-width: 90%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      padding: 2.5rem 1rem;
+      min-height: 400px;
+    }
+
+    .hero-text {
+      max-width: 100%;
+    }
+
+    .hero-background img {
+      object-position: 65% center;
+    }
   }
 </style>
