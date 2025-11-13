@@ -1,0 +1,71 @@
+---
+import heroImage from '../assets/heroimg.jpg';
+---
+
+<section class="hero" style={`background-image: url(${heroImage.src});`}>
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1 class="hero-title">
+        SUSTAINABLE<br />
+        PACKAGING<br />
+        SOLUTIONS
+      </h1>
+      <p class="hero-subtitle">
+        Creating sustainable packaging and<br />
+        fulfillment solutions for a better tomorrow
+      </p>
+      <button class="hero-button">CONTACT</button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    background-color: #FAF2E7;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 6rem 2rem;
+    min-height: 600px;
+  }
+
+  .hero-content {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .hero-text {
+    max-width: 500px;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .hero-button {
+    background-color: #DDBA4E;
+    color: white;
+    border: none;
+    padding: 0.8rem 2.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+
+  .hero-button:hover {
+    opacity: 0.8;
+  }
+</style>
