@@ -1,0 +1,107 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  imageSrc: string;
+  imageAlt: string;
+  reversed?: boolean;
+}
+
+const { title, description, imageSrc, imageAlt, reversed = false } = Astro.props;
+---
+
+<section class={`content-section ${reversed ? 'reversed' : ''}`}>
+  <div class="content-container">
+    <div class="content-text">
+      <h2 class="content-title">{title}</h2>
+      <p class="content-description">{description}</p>
+    </div>
+    <div class="content-image">
+      <img src={imageSrc} alt={imageAlt} />
+    </div>
+  </div>
+</section>
+
+<style>
+  .content-section {
+    background-color: #FAF2E7;
+    padding: 6rem 2rem;
+  }
+
+  .content-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .content-text {
+    flex: 1;
+  }
+
+  .content-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+
+  .content-description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    font-weight: 400;
+    line-height: 1.8;
+    color: #666;
+  }
+
+  .content-image {
+    flex: 1;
+    max-width: 600px;
+  }
+
+  .content-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+
+  /* Reversed layout */
+  .reversed .content-container {
+    flex-direction: row-reverse;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .content-section {
+      padding: 4rem 1.5rem;
+    }
+
+    .content-container {
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .reversed .content-container {
+      flex-direction: column;
+    }
+
+    .content-image {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .content-section {
+      padding: 3rem 1rem;
+    }
+
+    .content-container {
+      gap: 2rem;
+    }
+  }
+</style>

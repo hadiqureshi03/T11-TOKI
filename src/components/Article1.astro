@@ -1,0 +1,95 @@
+---
+import tokiai1 from '../assets/tokiai1.jpg';
+---
+
+<section class="who-are-we">
+  <div class="who-container">
+    <div class="who-text">
+      <h2 class="who-title">WHO ARE WE?</h2>
+      <p class="who-description">
+        At TOKI, we specialize in eco-friendly packaging solutions that prioritize
+        sustainability without compromising quality. Our customizable designs cater to
+        businesses of all sizes, ensuring your products are packaged with care for both
+        your customers and the planet.
+      </p>
+    </div>
+    <div class="who-image">
+      <img src={tokiai1.src} alt="TOKI sustainable packaging boxes" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .who-are-we {
+    background-color: #FAF2E7;
+    padding: 6rem 2rem;
+  }
+
+  .who-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .who-text {
+    flex: 1;
+  }
+
+  .who-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+
+  .who-description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    font-weight: 400;
+    line-height: 1.8;
+    color: #666;
+  }
+
+  .who-image {
+    flex: 1;
+    max-width: 600px;
+  }
+
+  .who-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .who-are-we {
+      padding: 4rem 1.5rem;
+    }
+
+    .who-container {
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .who-image {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .who-are-we {
+      padding: 3rem 1rem;
+    }
+
+    .who-container {
+      gap: 2rem;
+    }
+  }
+</style>
