@@ -1,0 +1,383 @@
+---
+import tokilogo from '../assets/tokilogo.png';
+---
+
+<section class="flow">
+  <div class="flow-container">
+    <div class="flow-header">
+      <h2 class="flow-title">OUR FIVE WAYS OF FLOW</h2>
+      <p class="flow-subtitle">This is our promise to help organisations unlock their full packaging potential</p>
+    </div>
+
+    <div class="flow-items">
+      <!-- Flow 1 -->
+      <div class="flow-item">
+        <button class="flow-button" data-flow="1">
+          <span class="flow-number">01</span>
+          <span class="flow-name">Insight & Alignment</span>
+          <span class="flow-icon">+</span>
+        </button>
+        <div class="flow-content" data-flow-content="1">
+          <div class="flow-card">
+            <img src={tokilogo.src} alt="TOKI logo" class="card-logo" />
+            <h3 class="card-title">INSIGHT & ALIGNMENT</h3>
+            <p class="card-description">
+              Everything begins with understanding.<br />
+              We immerse ourselves in your product, your market, and your brand to uncover the essence that makes you unique.<br />
+              Through workshops and dialogue, we create clarity around goals, values, and customer needs.
+            </p>
+            <p class="card-description">
+              Our aim is to establish a shared direction — a foundation where strategy and creativity meet.<br />
+              Outcome: A clear view of your potential and a mutual understanding of the path ahead.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 2 -->
+      <div class="flow-item">
+        <button class="flow-button" data-flow="2">
+          <span class="flow-number">02</span>
+          <span class="flow-name">Design DNA & Guiding Principles</span>
+          <span class="flow-icon">+</span>
+        </button>
+        <div class="flow-content" data-flow-content="2">
+          <div class="flow-card">
+            <img src={tokilogo.src} alt="TOKI logo" class="card-logo" />
+            <h3 class="card-title">DESIGN DNA & GUIDING PRINCIPLES</h3>
+            <p class="card-description">
+              Where insight meets form. Here, we translate strategic insights into a visual and functional foundation — your Design DNA.<br />
+              We define colours, typography, materials, and tone of voice to ensure consistency across every brand touchpoint.<br />
+              Goal: A clear design direction that can grow with your brand and build recognition — even as you evolve.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 3 -->
+      <div class="flow-item">
+        <button class="flow-button" data-flow="3">
+          <span class="flow-number">03</span>
+          <span class="flow-name">Concept & Visualization</span>
+          <span class="flow-icon">+</span>
+        </button>
+        <div class="flow-content" data-flow-content="3">
+          <div class="flow-card">
+            <img src={tokilogo.src} alt="TOKI logo" class="card-logo" />
+            <h3 class="card-title">CONCEPT & VISUALIZATION</h3>
+            <p class="card-description">
+              Where strategy comes to life. In this phase, ideas are transformed into experiences.<br />
+              We work with storytelling, design prototypes, and visual concepts to make your brand identity tangible and engaging.<br />
+              Here, packaging is not just protection — it becomes a vital part of your story.<br />
+              Goal: A visible and cohesive identity where aesthetics and function work in harmony.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 4 -->
+      <div class="flow-item">
+        <button class="flow-button" data-flow="4">
+          <span class="flow-number">04</span>
+          <span class="flow-name">Refinement & Implementation</span>
+          <span class="flow-icon">+</span>
+        </button>
+        <div class="flow-content" data-flow-content="4">
+          <div class="flow-card">
+            <img src={tokilogo.src} alt="TOKI logo" class="card-logo" />
+            <h3 class="card-title">REFINEMENT & IMPLEMENTATION</h3>
+            <p class="card-description">
+              From idea to reality. We test, refine, and develop solutions to ensure they work in practice — technically, aesthetically, and sustainably.<br />
+              Through prototypes and production tests, we make sure the solution not only looks good but performs reliably in production, logistics, and environmental impact.<br />
+              Goal: A solution that lives — not just looks good.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flow 5 -->
+      <div class="flow-item">
+        <button class="flow-button" data-flow="5">
+          <span class="flow-number">05</span>
+          <span class="flow-name">Partnership & Scaling</span>
+          <span class="flow-icon">+</span>
+        </button>
+        <div class="flow-content" data-flow-content="5">
+          <div class="flow-card">
+            <img src={tokilogo.src} alt="TOKI logo" class="card-logo" />
+            <h3 class="card-title">PARTNERSHIP & SCALING</h3>
+            <p class="card-description">
+              From plan to planet. Once the design is ready, we help bring it to life at scale.<br />
+              We collaborate with global suppliers and production experts who understand both quality and responsibility.<br />
+              Through close partnerships and continuous optimization, we help you scale your packaging — from prototype to full production.<br />
+              Goal: To create solutions that perform at scale without losing soul, quality, or sustainability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .flow {
+    background-color: #FAF2E7;
+    padding: 6rem 0;
+    border-bottom: 2px solid #000;
+  }
+
+  .flow-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .flow-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .flow-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  .flow-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: 400;
+    line-height: 1.6;
+    color: #666;
+  }
+
+  .flow-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .flow-item {
+    position: relative;
+    padding: 0 2rem;
+  }
+
+  .flow-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 2px;
+    background-color: #000;
+  }
+
+  .flow-item:first-child::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 2px;
+    background-color: #000;
+  }
+
+  .flow-button {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+  }
+
+  .flow-button:hover {
+    opacity: 0.7;
+  }
+
+  .flow-number {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 600;
+    color: #333;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .flow-name {
+    text-align: center;
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    font-weight: 600;
+    color: #333;
+    transition: opacity 0.3s;
+  }
+
+  .flow-item.active .flow-name {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .flow-icon {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 300;
+    color: #333;
+    transition: transform 0.3s;
+    border: 2px solid #333;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flow-item.active .flow-icon {
+    transform: rotate(45deg);
+  }
+
+  .flow-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+
+  .flow-item.active .flow-content {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in;
+  }
+
+  .flow-card {
+    position: relative;
+    padding: 4rem 3rem 5rem 3rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+  }
+
+  .card-logo {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 80px;
+    height: auto;
+    opacity: 0.3;
+  }
+
+  .card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    font-weight: 400;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .flow {
+      padding: 4rem 0;
+    }
+
+    .flow-container {
+      padding: 0 1.5rem;
+    }
+
+    .flow-items {
+      margin: 0 -1.5rem;
+    }
+
+    .flow-item {
+      padding: 0 1.5rem;
+    }
+
+    .flow-header {
+      margin-bottom: 3rem;
+    }
+
+    .flow-button {
+      padding: 1.25rem 0;
+      gap: 0.5rem;
+    }
+
+    .flow-card {
+      padding: 3rem 2rem 4rem 2rem;
+    }
+
+    .card-logo {
+      width: 60px;
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .flow {
+      padding: 3rem 0;
+    }
+
+    .flow-container {
+      padding: 0 1rem;
+    }
+
+    .flow-items {
+      margin: 0 -1rem;
+    }
+
+    .flow-item {
+      padding: 0 1rem;
+    }
+
+    .flow-header {
+      margin-bottom: 2rem;
+    }
+
+    .flow-button {
+      padding: 1rem 0;
+      gap: 0.5rem;
+    }
+
+    .flow-number {
+      min-width: 2rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.flow-button');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.flow-item');
+        if (!item) return;
+
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.flow-item').forEach(i => i.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+      });
+    });
+  });
+</script>
