@@ -1,0 +1,187 @@
+---
+import tokilogo from '../assets/tokilogo.png';
+---
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src={tokilogo.src} alt="TOKI logo" class="footer-logo" />
+      <p class="footer-copyright">©2025 TOKI - ALL RIGHTS RESERVED</p>
+    </div>
+
+    <div class="footer-center">
+      <div class="footer-column">
+        <p class="footer-text">GULDBERGGADE 29N</p>
+        <p class="footer-text">2200 KØBENHAVN N</p>
+        <p class="footer-text">TOKIFLOW@GMAIL.COM</p>
+        <p class="footer-text">+45 12345678</p>
+      </div>
+
+      <div class="footer-column">
+        <a href="#" class="footer-link">ABOUT</a>
+        <a href="#" class="footer-link">ABOUT US</a>
+        <a href="#" class="footer-link">JOBS</a>
+      </div>
+
+      <div class="footer-column">
+        <a href="#" class="footer-link">TOKI</a>
+        <a href="#" class="footer-link">PACKAGING</a>
+        <a href="#" class="footer-link">SERVICES</a>
+        <a href="#" class="footer-link">SUSTAINABILITY</a>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <h2 class="footer-title">SUSTAINABLE<br />PACKAGING<br />SOLUTIONS</h2>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: #FAF2E7;
+    padding: 3rem 0;
+    border-top: 2px solid #000;
+  }
+
+  .footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-logo {
+    width: 150px;
+    height: auto;
+  }
+
+  .footer-copyright {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .footer-center {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .footer-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #333;
+    margin: 0;
+  }
+
+  .footer-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+    transition: opacity 0.3s;
+  }
+
+  .footer-link:hover {
+    opacity: 0.7;
+  }
+
+  .footer-right {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .footer-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    color: #DDBA4E;
+    text-align: right;
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .footer-left {
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-center {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-right {
+      justify-content: center;
+    }
+
+    .footer-title {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      padding: 2rem 0;
+    }
+
+    .footer-container {
+      padding: 0 1.5rem;
+      gap: 2rem;
+    }
+
+    .footer-center {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .footer-logo {
+      width: 120px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-container {
+      padding: 0 1rem;
+    }
+
+    .footer-logo {
+      width: 100px;
+    }
+
+    .footer-text,
+    .footer-link {
+      font-size: 0.75rem;
+    }
+  }
+</style>
