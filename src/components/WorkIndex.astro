@@ -1,0 +1,194 @@
+---
+import tokiai3 from '../assets/tokiai3.png';
+---
+
+<section class="work-index">
+  <div class="work-container">
+    <h2 class="work-title">WORK INDEX</h2>
+
+    <div class="work-grid">
+      <a href="#" class="work-item">
+        <img src={tokiai3.src} alt="Work item 1" class="work-image" />
+        <div class="work-overlay">
+          <h3 class="work-item-title">WORK INDEX</h3>
+        </div>
+      </a>
+
+      <a href="#" class="work-item">
+        <img src={tokiai3.src} alt="Work item 2" class="work-image" />
+        <div class="work-overlay">
+          <h3 class="work-item-title">WORK INDEX</h3>
+        </div>
+      </a>
+
+      <a href="#" class="work-item">
+        <img src={tokiai3.src} alt="Work item 3" class="work-image" />
+        <div class="work-overlay">
+          <h3 class="work-item-title">WORK INDEX</h3>
+        </div>
+      </a>
+
+      <a href="#" class="work-item">
+        <img src={tokiai3.src} alt="Work item 4" class="work-image" />
+        <div class="work-overlay">
+          <h3 class="work-item-title">WORK INDEX</h3>
+        </div>
+      </a>
+
+      <a href="#" class="work-item">
+        <img src={tokiai3.src} alt="Work item 5" class="work-image" />
+        <div class="work-overlay">
+          <h3 class="work-item-title">WORK INDEX</h3>
+        </div>
+      </a>
+
+      <a href="#" class="work-item">
+        <img src={tokiai3.src} alt="Work item 6" class="work-image" />
+        <div class="work-overlay">
+          <h3 class="work-item-title">WORK INDEX</h3>
+        </div>
+      </a>
+
+      <a href="#" class="work-item">
+        <img src={tokiai3.src} alt="Work item 7" class="work-image" />
+        <div class="work-overlay">
+          <h3 class="work-item-title">WORK INDEX</h3>
+        </div>
+      </a>
+
+      <a href="#" class="work-item">
+        <img src={tokiai3.src} alt="Work item 8" class="work-image" />
+        <div class="work-overlay">
+          <h3 class="work-item-title">WORK INDEX</h3>
+        </div>
+      </a>
+
+      <a href="#" class="work-item">
+        <img src={tokiai3.src} alt="Work item 9" class="work-image" />
+        <div class="work-overlay">
+          <h3 class="work-item-title">WORK INDEX</h3>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .work-index {
+    background-color: #FAF2E7;
+    padding: 6rem 0;
+    border-bottom: 2px solid #000;
+  }
+
+  .work-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .work-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 4rem;
+  }
+
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    gap: 2rem;
+  }
+
+  .work-item {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .work-item:hover {
+    transform: scale(1.02);
+  }
+
+  .work-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .work-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .work-item:hover .work-overlay {
+    transform: translateY(0);
+  }
+
+  .work-item-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .work-grid {
+      gap: 1.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .work-index {
+      padding: 4rem 0;
+    }
+
+    .work-container {
+      padding: 0 1.5rem;
+    }
+
+    .work-title {
+      margin-bottom: 3rem;
+    }
+
+    .work-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .work-index {
+      padding: 3rem 0;
+    }
+
+    .work-container {
+      padding: 0 1rem;
+    }
+
+    .work-title {
+      margin-bottom: 2rem;
+    }
+
+    .work-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+</style>
