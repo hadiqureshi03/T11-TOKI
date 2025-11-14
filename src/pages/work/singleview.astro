@@ -1,0 +1,319 @@
+---
+import Navbar from '../../components/navbar.astro';
+import Footer from '../../components/Footer.astro';
+import tokiai3 from '../../assets/tokiai3.png';
+import tokiai4 from '../../assets/tokiai4.png';
+import tokiai5 from '../../assets/tokiai5.png';
+
+export function getStaticPaths() {
+  return [
+    {params: {id: '1'}},
+    {params: {id: '2'}},
+    {params: {id: '3'}},
+    {params: {id: '4'}},
+    {params: {id: '5'}},
+    {params: {id: '6'}},
+    {params: {id: '7'}},
+    {params: {id: '8'}},
+    {params: {id: '9'}},
+  ];
+}
+---
+
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nordic Essense - TOKI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <Navbar />
+
+    <main class="work-detail">
+      <div class="work-detail-container">
+        <!-- Back Button -->
+        <a href="/" class="back-button">← Back to Home</a>
+
+        <!-- Header Section -->
+        <div class="work-header">
+          <h1 class="work-main-title">NORDIC ESSENSE</h1>
+          <p class="work-subtitle">PREMIUM PACKAGING REDESIGN FOR A NATURAL COSMETICS BRAND</p>
+
+          <div class="work-meta">
+            <div class="meta-item">
+              <p class="meta-label">Client</p>
+              <p class="meta-value">Nordic Essense — Premium Natural Cosmetics</p>
+            </div>
+            <div class="meta-item">
+              <p class="meta-label">Location</p>
+              <p class="meta-value">Copenhagen, Denmark</p>
+            </div>
+            <div class="meta-item">
+              <p class="meta-label">Timeline</p>
+              <p class="meta-value">6 months</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="work-content-grid">
+          <!-- Left: Images -->
+          <div class="work-images">
+            <img src={tokiai3.src} alt="Nordic Essense packaging" class="work-image-large" />
+            <div class="work-image-row">
+              <img src={tokiai4.src} alt="Product detail 1" class="work-image-small" />
+              <img src={tokiai5.src} alt="Product detail 2" class="work-image-small" />
+            </div>
+          </div>
+
+          <!-- Right: Text Content -->
+          <div class="work-text">
+            <div class="text-section">
+              <h3 class="text-section-title">THE BRIEF</h3>
+              <p class="text-section-content">
+                Nordic Essense, a fast-growing Scandinavian skincare brand focused on natural ingredients and minimalist aesthetics, was ready to evolve.
+              </p>
+              <p class="text-section-content">
+                They approached TOKI to create packaging that would reflect their premium positioning, while elevating the brand's international appeal.
+              </p>
+              <p class="text-section-content">
+                Their goals were clear:<br />
+                • Shift perception from "natural and affordable" to "premium Scandinavian design"<br />
+                • Use eco-friendly, tactile materials<br />
+                • Strengthen visual recognition both on shelf and online<br />
+                • Simplify packaging processes to reduce costs while improving quality and consistency.
+              </p>
+            </div>
+
+            <div class="text-section">
+              <h3 class="text-section-title">THE OUTCOME</h3>
+              <p class="text-section-content">
+                • Aesthetic clarity drives perceived brand value (survey-based)
+              </p>
+              <p class="text-section-content">
+                • 12% cost reduction per unit through smarter material sourcing
+              </p>
+              <p class="text-section-content">
+                • Winner of the Sustainable Design Award in Beauty & Personal Care
+              </p>
+              <p class="text-section-content">
+                • 38% growth in online sales and improved unboxing experience
+              </p>
+            </div>
+
+            <div class="text-section">
+              <h3 class="text-section-title">KEY LEARNINGS</h3>
+              <p class="text-section-content">
+                • Aesthetic clarity drives commercial performance
+              </p>
+              <p class="text-section-content">
+                • Insight-led design generates expensive packaging solutions
+              </p>
+              <p class="text-section-content">
+                • Sustainability and scalability must evolve in parallel, not as trade-offs
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FAF2E7;
+    color: #333;
+  }
+
+  .work-detail {
+    background-color: #FAF2E7;
+    padding: 4rem 0;
+    min-height: calc(100vh - 200px);
+  }
+
+  .work-detail-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .back-button {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+    background-color: #DDBA4E;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #000;
+    border-radius: 10px;
+    transition: opacity 0.3s;
+  }
+
+  .back-button:hover {
+    opacity: 0.8;
+  }
+
+  .work-header {
+    margin-bottom: 3rem;
+  }
+
+  .work-main-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  .work-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+
+  .work-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .meta-item {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .meta-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
+    min-width: 80px;
+  }
+
+  .meta-value {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #666;
+  }
+
+  .work-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .work-images {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .work-image-large {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .work-image-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .work-image-small {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .work-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .text-section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #333;
+  }
+
+  .text-section-content {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .work-content-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .work-detail {
+      padding: 3rem 0;
+    }
+
+    .work-detail-container {
+      padding: 0 1.5rem;
+    }
+
+    .work-header {
+      margin-bottom: 2rem;
+    }
+
+    .meta-item {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .work-content-grid {
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .work-detail-container {
+      padding: 0 1rem;
+    }
+
+    .work-image-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

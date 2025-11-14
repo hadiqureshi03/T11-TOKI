@@ -17,10 +17,25 @@ import heroImage from '../assets/heroimg.jpg';
         Creating sustainable packaging and<br />
         fulfillment solutions for a better tomorrow
       </p>
-      <button class="hero-button">CONTACT</button>
+      <a href="#contact" class="hero-button">CONTACT</a>
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const heroButton = document.querySelector('.hero-button');
+    if (heroButton) {
+      heroButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+  });
+</script>
 
 <style>
   .hero {
@@ -87,6 +102,7 @@ import heroImage from '../assets/heroimg.jpg';
   }
 
   .hero-button {
+    display: inline-block;
     font-family: 'Montserrat', sans-serif;
     background-color: #DDBA4E;
     color: white;
@@ -98,6 +114,7 @@ import heroImage from '../assets/heroimg.jpg';
     letter-spacing: 1px;
     cursor: pointer;
     transition: opacity 0.3s;
+    text-decoration: none;
   }
 
   .hero-button:hover {
