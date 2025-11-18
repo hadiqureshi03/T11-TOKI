@@ -202,7 +202,8 @@ const { project } = Astro.props;
 
   .work-image-large {
     width: 100%;
-    height: auto;
+    max-height: 400px;
+    object-fit: cover;
     display: block;
   }
 
@@ -294,11 +295,6 @@ const { project } = Astro.props;
 
     .work-content-grid {
       gap: 2rem;
-    }
-
-    .text-section-row {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
     }
 
     .back-button {
