@@ -48,7 +48,10 @@ const { project } = Astro.props;
 
         <!-- Header Section -->
         <div class="work-header">
-          <h1 class="work-main-title">{project.title}</h1>
+          <h1 class="work-main-title">{project.title.split('|')[0].trim()}</h1>
+          {project.title.split('|')[1] && (
+            <p class="work-subtitle">{project.title.split('|')[1].trim()}</p>
+          )}
 
           <div class="work-meta">
             <div class="meta-item">
@@ -159,7 +162,15 @@ const { project } = Astro.props;
     font-weight: 700;
     letter-spacing: 2px;
     color: #333;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .work-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 1.5rem;
   }
 
   .work-meta {
@@ -202,7 +213,8 @@ const { project } = Astro.props;
 
   .work-image-large {
     width: 100%;
-    height: auto;
+    max-height: 400px;
+    object-fit: cover;
     display: block;
   }
 
@@ -294,11 +306,6 @@ const { project } = Astro.props;
 
     .work-content-grid {
       gap: 2rem;
-    }
-
-    .text-section-row {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
     }
 
     .back-button {
